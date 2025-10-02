@@ -1,0 +1,6 @@
+@TinyApi_HostAddress = http://localhost:5065
+
+GET {{TinyApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
