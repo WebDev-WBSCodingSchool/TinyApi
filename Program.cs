@@ -20,7 +20,7 @@ app.MapGet("/db-check", async (AppDbContext db) =>
 {
     try
     {
-        var result = await db.Database.SqlQueryRaw<DateTime>("SELECT GETDATE() as Value").FirstAsync();
+        var result = await db.Database.SqlQueryRaw<DateTimeOffset>("SELECT SYSDATETIMEOFFSET() AS Value").SingleAsync();
         return Results.Ok($"DB connection OK. Server time: {result}");
     }
     catch (Exception ex)

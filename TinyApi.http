@@ -1,6 +1,10 @@
-@TinyApi_HostAddress = http://localhost:5065
+# Requests for the API started with docker compose.
+@TinyApi_HostAddress = http://localhost:8080
 
-GET {{TinyApi_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{TinyApi_HostAddress}}/
+
+###
+
+GET {{TinyApi_HostAddress}}/db-check
 
 ###
